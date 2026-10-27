@@ -1,0 +1,17 @@
+# 路径相对本配置文件；一个数据目录只供一个本地使用者。
+data_dir = "./data"
+actor = "local-user"
+# 主动浮现受众是路由标签，不是权限系统。
+audiences = ["local-user"]
+# 这个作者的 feel 不进入普通检索；不提供其他读取入口。
+private_author = "human"
+dictionary_files = []
+# aliases_file = "./aliases.json"
+[matching]
+fuzzy_threshold = 50
+max_results = 5
+[hybrid_search]
+enabled = true
+strong_gate = true
+fuzz_strong = 0.5
+bm25_strong_ratio = 0.5
